@@ -17,7 +17,7 @@ const Home: NextPage = () => {
           Moving is hard.
         </h1>
         <h2 className={styles.typing}>
-          Let's make it easier :)
+          Let&apos;s make it easier :)
         </h2>
 
       </main>
