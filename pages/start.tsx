@@ -3,33 +3,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { InferGetServerSidePropsType } from 'next'
-
+import Data from './getdata'
 
 const Home: NextPage = () => {
-type Data = {}
+// posts will be populated at build time by getStaticProps()
 
-const getServerSideProps = async () => {
-  // Fetch data from external API
-  const res = await fetch(`https://api.census.gov/data/2019/acs/acs1?get=NAME,B01001_001E&for=state:*&key=${process.env.CENSUS_KEY}`)
-  const data: Data = await res.json()
-
-  return {
-    props: {
-      data,
-    },
-  }
-}
-function Getdata({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  // will resolve posts to type Data
-  console.log(data)
-  return(
-    <>
-  {console.log({data})}
-
-    Hello!
-    </>
-  )
-}
   return (
     <div className={styles.container}>
       <Head>
@@ -42,7 +20,7 @@ function Getdata({ data }: InferGetServerSidePropsType<typeof getServerSideProps
         <h1 className={styles.title}>
           What is important to you?
         </h1>
-        <Getdata data={''}/>
+        <Data/>
 
       </main>
 
@@ -52,7 +30,7 @@ function Getdata({ data }: InferGetServerSidePropsType<typeof getServerSideProps
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' Logan Web Dev'}
+          Powered by{' Logan Web Houqhef'}
           <span className={styles.logo}>
 
           </span>
