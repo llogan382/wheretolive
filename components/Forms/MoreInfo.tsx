@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import styles from "../../styles/styles.module.scss";
+import styles from "../../styles/Styles.module.scss";
 import { Form } from "@unform/web";
 import Checkbox from "../InputFields/Checkbox";
 import { useFormData } from "../../context";

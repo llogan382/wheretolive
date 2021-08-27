@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { useField } from "@unform/core";
 import { useFormData } from "../../context";
 
-import styles from "../../styles/styles.module.scss";
+import styles from "../../styles/Styles.module.scss";
 
 export default function Checkbox({ name, value, label, ...rest }) {
   const inputRef = useRef();
