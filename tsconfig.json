@@ -11,6 +11,11 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "strictNullChecks": false,
+    "allowUnusedLabels": true,
+    "strictPropertyInitialization": false,
+    "suppressImplicitAnyIndexErrors":true,
+    "suppressExcessPropertyErrors":true,
     "isolatedModules": true,
     "jsx": "preserve"
   },

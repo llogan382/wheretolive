@@ -11,8 +11,9 @@ const schema = yup.object().shape({
 });
 
 export default function Interests({ formStep, nextFormStep }) {
+  // @ts-ignore
   const { setFormValues } = useFormData();
-  const formRef = useRef();
+  const formRef: any = useRef();
 
   async function handleSubmit(data) {
     try {

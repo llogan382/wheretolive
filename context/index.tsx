@@ -1,6 +1,7 @@
 import { useState, createContext, useContext } from "react";
 
-export const FormContext = createContext();
+  // @ts-ignore
+export const FormContext = createContext({});
 
 export default function FormProvider({ children }) {
   const [data, setData] = useState({});

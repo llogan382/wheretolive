@@ -10,9 +10,9 @@ const schema = yup.object().shape({
   checkbox: yup.bool().oneOf([true], "Checkbox is required"),
 });
 
-export default function Area({ formStep, nextFormStep }) {
-  const { setFormValues } = useFormData();
-  const formRef = useRef();
+export default function Area({ formStep, nextFormStep }: any) {
+  const { setFormValues }: any = useFormData();
+  const formRef: any = useRef();
 
   async function handleSubmit(data) {
     try {
