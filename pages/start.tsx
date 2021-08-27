@@ -18,9 +18,9 @@ const App = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Unform Multi Step Form</title>
+        <title>Where should I move now</title>
       </Head>
-      <h1>Unform Multi Step Form</h1>
+      <h1>The magic, moving form</h1>
 
       <FormCard currentStep={formStep} prevFormStep={prevFormStep}>
         {formStep >= 0 && (
