@@ -7,6 +7,7 @@ export default function FormCompleted() {
     <>
       <h2>Let&aposs find the best places to move... 🎉</h2>
 
+
     </>
   );
 }
