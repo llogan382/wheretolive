@@ -18,10 +18,11 @@ function numberWithCommas(x) {
 useEffect(() => {
   const hostname = `https://api.census.gov/data`;
   const year = `2019`;
-  const datasets = `acs/acs1`;
+  const datasets = `acs/acs1/profile`;
   // B23002B_001E African americans in workforce
-  const itemToCompare = `B23002B_001E`
-  const variables = `?get=NAME,${itemToCompare},B01001_001E`;
+// B08006_017E	Estimate!!Total:!!Worked from home
+  const itemToCompare = ``
+  const variables = `?get=NAME,${itemToCompare}DP02_0016E`;
   const variablePredicates = ``;
   const geographies = `&for=county:*&in=state:*`;
   const key = `ee638959ae386e00dd646af2980f3da1f171a529`
@@ -31,7 +32,14 @@ useEffect(() => {
             try {
                 const response = await fetch(url);
                 const json = await response.json();
-                const result = json.sort((a, b) => ((a[2]/a[1]) > (b[2]/b[1])) ? 1 : -1)
+
+
+
+
+                // {console.log(json)}
+
+                const result = json.sort((a, b) => a[1] < b[1] ? 1 : -1);
+
 
                 /**
                  * 1. Get percentage of each
@@ -54,15 +62,12 @@ useEffect(() => {
         <div>
           Hi
           <ol>
-      {Object.values(advice).map(item => {
-        {console.log(item)}
-        return(
-        <li key={item[4]}>
-          {item[0]} {toPercent((item[1]/item[2]))}
-        </li>
-        )
-
-      })}
+{Object.values(advice).slice(1,50).map(item =>
+  <li key={item[1]-item[3]}>
+    {item[0]}{item[1]}
+    {console.log(advice)}
+  </li>
+)}
 
           </ol>
 
