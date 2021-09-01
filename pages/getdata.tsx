@@ -32,20 +32,14 @@ useEffect(() => {
             try {
                 const response = await fetch(url);
                 const json = await response.json();
+              // TODO: show data from forms
+              // TODO: Display weighted data from multiple inputs
 
+// 1. Get data response
 
-
-
-                // {console.log(json)}
+// 2. Get the parts to use in calculations.
 
                 const result = json.sort((a, b) => a[1] < b[1] ? 1 : -1);
-
-
-                /**
-                 * 1. Get percentage of each
-                 * 2. Multiply percentage by weight (so, if 3 variables, multiply by .33)
-                 * 3. Add the results of the percentages.
-                 */
 
                 setAdvice(result);
             } catch (error) {

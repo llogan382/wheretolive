@@ -26,6 +26,7 @@ const App = () => {
 
       <FormCard currentStep={formStep} prevFormStep={prevFormStep}>
         {formStep >= 0 && (
+          // TODO: Collect form data
           <Interests formStep={formStep} nextFormStep={nextFormStep} />
 
         )}
