@@ -1,3 +1,4 @@
+// remove the variables from the array
 export const amtToRemove = (items: []) => {
   items.length - 3;
 }

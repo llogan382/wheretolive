@@ -1,8 +1,8 @@
-let array = ['Guilford county, NC', 27, 52, 83, 37, 143];
+let array = ['Guilford county, NC', null, null,  37, 143];
 const amtToRemove = array.length - 3;
 let newArray = array.splice(1, amtToRemove);
 
-const average = newArray => newArray.reduce((a,b) => a + b, 0)/ newArray.length;
+const average = someArray => someArray.reduce((a,b) => a + b, 0)/ someArray.length;
 
 
 // I have an array
