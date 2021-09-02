@@ -85,12 +85,10 @@ function calculateAverage(array) {
 
     return (
         <div>
-          Hi
           <ol>
 {Object.values(advice).slice(1,50).map(item =>
   <li key={item[1]}{...item[2]}>
     {item[0]}{toPercent(item[3])}
-    {console.log(advice)}
   </li>
 )}
 

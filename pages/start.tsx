@@ -1,7 +1,5 @@
 import { useState, useRef } from "react";
 import Head from "next/head";
-import Data from "../pages/getdata";
-
 import styles from "../styles/Styles.module.scss";
 import FormCard from "../components/FormCard";
 import {
@@ -22,7 +20,7 @@ const App = () => {
         <title>Where should I move now</title>
       </Head>
       <h1>The magic, moving form</h1>
-      <Data />
+
 
       <FormCard currentStep={formStep} prevFormStep={prevFormStep}>
         {formStep >= 0 && (
