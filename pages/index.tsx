@@ -1,44 +1,50 @@
-import type { NextPage } from 'next'
-import Link from 'next/link'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { useState, useRef } from "react";
+import Head from "next/head";
 
-const Home: NextPage = () => {
+import styles from "../styles/Styles.module.scss";
+import FormCard from "../components/FormCard";
+import {
+  Interests, MoreInfo, Area
+} from "../components/Forms";
+import FormCompleted from "../components/FormCompleted";
+
+const App = () => {
+  const [formStep, setFormStep] = useState(0);
+
+  const nextFormStep = () => setFormStep((currentStep) => currentStep + 1);
+
+  const prevFormStep = () => setFormStep((currentStep) => currentStep - 1);
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <meta name="description" content="Where should I move?" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Where should I move now</title>
       </Head>
+      <h1>The magic, moving form</h1>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Moving is hard.
-        </h1>
-        <h2 className={styles.typing}>
-          Let&apos;s make it easier :)
-        </h2>
-        <Link href="/start">
-          <a>Get Started</a>
-        </Link>
-      </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' Logan Web Dev'}
-          <span className={styles.logo}>
+      <FormCard currentStep={formStep} prevFormStep={prevFormStep}>
+        {formStep >= 0 && (
+          // TODO: Collect form data
+          <Interests formStep={formStep} nextFormStep={nextFormStep} />
 
-          </span>
-        </a>
-      </footer>
+        )}
+        {formStep >= 1 && (
+          <MoreInfo formStep={formStep} nextFormStep={nextFormStep} />
+
+        )}
+        {formStep >= 2 && (
+          <Area formStep={formStep} nextFormStep={nextFormStep} />
+
+        )}
+
+        {formStep >= 3 && <FormCompleted />}
+      </FormCard>
+
+
+
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default App;

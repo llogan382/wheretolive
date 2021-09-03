@@ -43,13 +43,13 @@ export default function Area({ formStep, nextFormStep }: any) {
       <h2>How LARGE is your search are?</h2>
       <Form ref={formRef} onSubmit={handleSubmit}>
         <div className={styles.formRow}>
-          <Checkbox name="Age" label="State" value=""/>
-          <Checkbox name="Age" label="City" value=""/>
-          <Checkbox name="Age" label="County" value=""/>
-          <Checkbox name="Age" label="Zipcode" value=""/>
+          <Checkbox name="State" label="State" value="State"/>
+          <Checkbox name="City" label="City" value="City"/>
+          <Checkbox name="Age" label="County" value="County"/>
+          <Checkbox name="Zipcode" label="Zipcode" value="Zipcode"/>
 
         </div>
-        <button type="submit">Next</button>
+        <button onClick={setFormValues}>Next</button>
       </Form>
     </div>
   );

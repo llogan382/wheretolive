@@ -44,16 +44,11 @@ export default function Interests({ formStep, nextFormStep }) {
       <h2>What are you interested in?</h2>
       <Form ref={formRef} onSubmit={handleSubmit}>
         <div className={styles.formRow}>
-          <Checkbox name="Age" label="Age" value=""/>
-          <Checkbox name="FamilyFriendly" label="FamilyFriendly" value=""/>
-          <Checkbox name="Crime" label="Crime" value=""/>
-
-
-
-
-
+          <Checkbox name="Age" label="Age" value="Age"/>
+          <Checkbox name="FamilyFriendly" label="FamilyFriendly" value="FamilyFriendly"/>
+          <Checkbox name="Crime" label="Crime" value="Crime"/>
         </div>
-        <button type="submit">Next</button>
+        <button onClick={setFormValues} type="submit">Next</button>
       </Form>
     </div>
   );
