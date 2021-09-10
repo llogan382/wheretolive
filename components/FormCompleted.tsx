@@ -1,5 +1,5 @@
 import { useFormData } from "../context";
-import Data from "../pages/getdata";
+import Data from "./getdata";
 export default function FormCompleted() {
   // @ts-ignore
   const { data } = useFormData();

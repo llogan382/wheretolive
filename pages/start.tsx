@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import Head from "next/head";
-import Data from "../pages/getdata";
+import Data from "../components/getdata";
 
 import styles from "../styles/Styles.module.scss";
 import FormCard from "../components/FormCard";
