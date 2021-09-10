@@ -41,11 +41,11 @@ export default function MoreInfo({ formStep, nextFormStep }) {
 
   return (
     <div className={formStep === 1 ? styles.showForm : styles.hideForm}>
-      <h2>Tell us a little more about AGE:</h2>
+      <h2>What what is important in regards to the economy?</h2>
       <Form ref={formRef} onSubmit={handleSubmit}>
         <div className={styles.formRow}>
-          <h5>Click next to see your results</h5>
-          <p>This page will be added later</p>
+          <Checkbox name="DP03_0001PE" label="Low unemployment" value=""/>
+          <Checkbox name="DP03_0086PE" label="Highest average family income" value=""/>
         </div>
         <button type="submit">Next</button>
       </Form>

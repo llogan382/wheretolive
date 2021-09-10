@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Where should I move?</title>
         <meta name="description" content="Where should I move?" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

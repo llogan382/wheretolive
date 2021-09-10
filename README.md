@@ -57,6 +57,7 @@ ECONOMIC
 https://api.census.gov/data/2019/acs/acs1/profile/groups/DP03.html
 
 - Employment Status
+- DP03_0001PE
 - industry of labor (sales, construction, etc)
 - household by income (gives a range)
 - measure incomve vs poverty level
