@@ -1,7 +1,7 @@
 import { useFormData } from "../context";
 import Data from "../pages/getdata";
 export default function FormCompleted() {
-  // const { data } = useFormData();
+  // @ts-ignore
   const { data } = useFormData();
 const identifiers = Object.keys(data)
 const active = identifiers.filter(function(id) {
