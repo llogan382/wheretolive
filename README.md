@@ -32,3 +32,53 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+What do we have?
+
+SOCIAL
+https://api.census.gov/data/2019/acs/acs1/profile/groups/DP02.html
+
+This includes:
+Married couples
+Family,
+
+Kids,
+et.
+Also
+Education
+Residence 1 year ago
+World Region of birth
+Language at home
+Ancestry
+Broadband internet
+
+ECONOMIC
+https://api.census.gov/data/2019/acs/acs1/profile/groups/DP03.html
+
+- Employment Status
+- industry of labor (sales, construction, etc)
+- household by income (gives a range)
+- measure incomve vs poverty level
+
+
+HOUSING
+https://api.census.gov/data/2019/acs/acs1/profile/groups/DP04.html
+
+- vacant housing units
+- Total housing units!!1-unit, detached (like, single family)
+- Total housing units!!20 or more units
+- When homes were built
+- rooms in the house
+- owner/renter
+- when they moved into the home
+- Value of owner occupied units
+- rental costs Occupied units paying rent!!$1,000 to $1,499
+- rent as % of household income
+
+
+DEMOGRAPHIC
+https://api.census.gov/data/2019/acs/acs1/profile/groups/DP05.html
+
+- age (by group) and sex
+- race (mix, etc)

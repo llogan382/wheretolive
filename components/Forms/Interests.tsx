@@ -40,17 +40,12 @@ export default function Interests({ formStep, nextFormStep }) {
   }
 
   return (
-    <div className={formStep === 0 ? styles.showForm : styles.hideForm}>
+    <div className={formStep === 2 ? styles.showForm : styles.hideForm}>
       <h2>What are you interested in?</h2>
       <Form ref={formRef} onSubmit={handleSubmit}>
         <div className={styles.formRow}>
-          <Checkbox name="Age" label="Age" value=""/>
-          <Checkbox name="FamilyFriendly" label="FamilyFriendly" value=""/>
-          <Checkbox name="Crime" label="Crime" value=""/>
-
-
-
-
+          <h5>Click next to see your results</h5>
+          <p>This page will be added later</p>
 
         </div>
         <button type="submit">Next</button>

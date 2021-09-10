@@ -5,9 +5,10 @@ import Data from "../pages/getdata";
 import styles from "../styles/Styles.module.scss";
 import FormCard from "../components/FormCard";
 import {
-  Interests, MoreInfo, Area
+  Social, MoreInfo, Area
 } from "../components/Forms";
 import FormCompleted from "../components/FormCompleted";
+import Interests from "../components/Forms/Interests";
 
 const App = () => {
   const [formStep, setFormStep] = useState(0);
@@ -22,11 +23,10 @@ const App = () => {
         <title>Where should I move now</title>
       </Head>
       <h1>The magic, moving form</h1>
-      <Data />
 
       <FormCard currentStep={formStep} prevFormStep={prevFormStep}>
         {formStep >= 0 && (
-          <Interests formStep={formStep} nextFormStep={nextFormStep} />
+          <Social formStep={formStep} nextFormStep={nextFormStep} />
 
         )}
         {formStep >= 1 && (
@@ -34,7 +34,7 @@ const App = () => {
 
         )}
                 {formStep >= 2 && (
-          <Area formStep={formStep} nextFormStep={nextFormStep} />
+          <Interests formStep={formStep} nextFormStep={nextFormStep} />
 
         )}
 
