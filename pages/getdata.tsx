@@ -8,7 +8,7 @@ export default function Data(searchVars: any):any {
 
 
   function toPercent(val){
-    return (parseFloat(val).toFixed(2))*100+"%";
+    return Number(parseFloat(val).toFixed(2))*100;
   }
 
 function numberWithCommas(x) {
@@ -57,7 +57,7 @@ useEffect(() => {
         };
 
         fetchData();
-    }, []);
+    });
 
 
 
