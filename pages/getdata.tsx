@@ -41,9 +41,6 @@ useEffect(() => {
 
 
 
-
-                // {console.log(json)}
-
                 const result = json.sort((a, b) => a[1] < b[1] ? 1 : -1);
 
 
