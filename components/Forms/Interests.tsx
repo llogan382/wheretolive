@@ -44,9 +44,8 @@ export default function Interests({ formStep, nextFormStep }) {
       <h2>What are you interested in?</h2>
       <Form ref={formRef} onSubmit={handleSubmit}>
         <div className={styles.formRow}>
-          <h5>Click next to see your results</h5>
-          <p>This page will be added later</p>
-
+          <Checkbox name="DP04_0088PE" label="Homes over $1 Million" value=""/>
+          <Checkbox name="DP04_0137PE" label="Lowest Rent" value=""/>
         </div>
         <button type="submit">Next</button>
       </Form>

@@ -34,33 +34,16 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 
-What do we have?
 
-SOCIAL
-https://api.census.gov/data/2019/acs/acs1/profile/groups/DP02.html
+# Roadmap
 
-This includes:
-Married couples
-Family,
-
-Kids,
-et.
-Also
-Education
-Residence 1 year ago
-World Region of birth
-Language at home
-Ancestry
-Broadband internet
-
-ECONOMIC
-https://api.census.gov/data/2019/acs/acs1/profile/groups/DP03.html
-
-- Employment Status
-- DP03_0001PE
-- industry of labor (sales, construction, etc)
-- household by income (gives a range)
-- measure incomve vs poverty level
+1. Finish page 3 and 4. This includes HOUSING and DEMOGRAPHIC info.
+1. Filter based off of location. Show results for a single state, several states, or cities.
+2. Filter based off of population: show results for Large, medium, and small towns.
+   1. Show COMBINED
+   2. show top 5 LARGE populations
+   3. show top 5 middle pops.
+   4. show top 5 SMALL populations
 
 
 HOUSING
