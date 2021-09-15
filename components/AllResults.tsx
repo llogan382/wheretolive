@@ -15,9 +15,8 @@ export const AllResults = (jsonResponse) => {
 
     }, [jsonResponse])
 
-
-                // Sort according to best score.
-                const result = results.sort((a, b) => a[2] < b[2] ? 1 : -1);
+                const result = results.slice().sort(function(a, b) { return Number(b[2]) - Number(a[2])});
+                console.log(result);
   return(
         <div>
           Here are the COMBINED top results:

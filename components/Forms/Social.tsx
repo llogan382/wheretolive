@@ -47,14 +47,14 @@ export default function Social({ formStep, nextFormStep }: any) {
 
           <Checkbox name="DP02_0002PE" label="More Households with MARRIED couples" value=""/>
           <Checkbox name="DP02_0004PE" label="More Households with NON-MARRIED couples" value=""/>
-          <Checkbox name="DP02_0017PE" label="Largest family size" value=""/>
+          <Checkbox name="DP02_0017E" label="Largest family size" value=""/>
           <Checkbox name="DP02_0029PE" label="More widowed males" value=""/>
           <Checkbox name="DP02_0030PE" label="More divorced males" value=""/>
           <Checkbox name="DP02_0026PE" label="More males who have never been marries" value=""/>
           <Checkbox name="DP02_0035PE" label="More widowed females" value=""/>
           <Checkbox name="DP02_0036PE" label="More divorced females" value=""/>
           <Checkbox name="DP02_0032PE" label="More females who have never been married" value=""/>
-          <Checkbox name="DP02_0037PE" label="More babies born in the past 12 months" value=""/>
+          <Checkbox name="DP02_0040E" label="More babies born in the past 12 months" value=""/>
           <Checkbox name="DP02_0066PE" label="Education: college, Masters degree or higher" value=""/>
           <Checkbox name="DP02_0093PE" label="More people born in foreign countries" value=""/>
 
