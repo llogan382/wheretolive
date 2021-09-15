@@ -9,9 +9,8 @@ export const LeastPopulated = (jsonResponse) => {
     setResults(data.jsonResponse);
   }, [jsonResponse])
 
-
+// TODO: Add prettier
           const [asArray] = [jsonResponse.jsonResponse];
-  // console.log(asArray[2]);
                 const oneThird = Math.floor(asArray.length / 3);
 
 

@@ -37,13 +37,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 # Roadmap
 
-1. Finish page 3 and 4. This includes HOUSING and DEMOGRAPHIC info.
 1. Filter based off of location. Show results for a single state, several states, or cities.
-2. Filter based off of population: show results for Large, medium, and small towns.
-   1. Show COMBINED
-   2. show top 5 LARGE populations
-   3. show top 5 middle pops.
-   4. show top 5 SMALL populations
 
 
 HOUSING

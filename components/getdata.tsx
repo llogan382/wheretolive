@@ -26,6 +26,7 @@ useEffect(() => {
   // B23002B_001E African americans in workforce
 // B08006_017E	Estimate!!Total:!!Worked from home
   const itemToCompare = arrToInsert;
+  // Get the number of households, and the items to compare. Households is #2 of returned array.
   const variables = `?get=NAME,DP02_0001E,${itemToCompare}`;
   const variablePredicates = ``;
   // example BY PLACE
