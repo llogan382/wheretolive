@@ -57,7 +57,7 @@ function calculateAverage(array) {
               // TODO: Display weighted data from multiple inputs
                 json.map(item => {
                 const toRemove = item.length - 3;
-                let justVars = item.splice(1, toRemove);
+                let justVars = item.splice(2, toRemove);
                 const arrSum = arr => arr.reduce((a,b) => Number(a) + Number(b), 0);
               }),
               setAdvice(json);
