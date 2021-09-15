@@ -14,12 +14,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Moving is hard.
-        </h1>
-        <h2 className={styles.typing}>
-          Let&apos;s make it easier :)
-        </h2>
+        <h1 className={styles.title}>Moving is hard.</h1>
+        <h2 className={styles.typing}>Let&apos;s make it easier :)</h2>
         <Link href="/start">
           <a>Get Started</a>
         </Link>
@@ -32,9 +28,7 @@ const Home: NextPage = () => {
           rel="noopener noreferrer"
         >
           Powered by{' Logan Web Dev'}
-          <span className={styles.logo}>
-
-          </span>
+          <span className={styles.logo}></span>
         </a>
       </footer>
     </div>

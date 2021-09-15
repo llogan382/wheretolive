@@ -1,21 +1,19 @@
-import { useState, useRef } from "react";
-import Head from "next/head";
-import Data from "../components/getdata";
+import { useState, useRef } from 'react'
+import Head from 'next/head'
+import Data from '../components/getdata'
 
-import styles from "../styles/Styles.module.scss";
-import FormCard from "../components/FormCard";
-import {
-  Social, MoreInfo, Area
-} from "../components/Forms";
-import FormCompleted from "../components/FormCompleted";
-import Interests from "../components/Forms/Interests";
+import styles from '../styles/Styles.module.scss'
+import FormCard from '../components/FormCard'
+import { Social, MoreInfo, Area } from '../components/Forms'
+import FormCompleted from '../components/FormCompleted'
+import Interests from '../components/Forms/Interests'
 
 const App = () => {
-  const [formStep, setFormStep] = useState(0);
+  const [formStep, setFormStep] = useState(0)
 
-  const nextFormStep = () => setFormStep((currentStep) => currentStep + 1);
+  const nextFormStep = () => setFormStep((currentStep) => currentStep + 1)
 
-  const prevFormStep = () => setFormStep((currentStep) => currentStep - 1);
+  const prevFormStep = () => setFormStep((currentStep) => currentStep - 1)
 
   return (
     <div className={styles.container}>
@@ -27,24 +25,18 @@ const App = () => {
       <FormCard currentStep={formStep} prevFormStep={prevFormStep}>
         {formStep >= 0 && (
           <Social formStep={formStep} nextFormStep={nextFormStep} />
-
         )}
         {formStep >= 1 && (
           <MoreInfo formStep={formStep} nextFormStep={nextFormStep} />
-
         )}
-                {formStep >= 2 && (
+        {formStep >= 2 && (
           <Interests formStep={formStep} nextFormStep={nextFormStep} />
-
         )}
 
         {formStep >= 3 && <FormCompleted />}
       </FormCard>
-
-
-
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

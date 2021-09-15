@@ -1,30 +1,30 @@
-import { useEffect, useRef } from "react";
-import { useField } from "@unform/core";
-import { useFormData } from "../../context";
+import { useEffect, useRef } from 'react'
+import { useField } from '@unform/core'
+import { useFormData } from '../../context'
 
-import styles from "../../styles/Styles.module.scss";
+import styles from '../../styles/Styles.module.scss'
 
 export default function Checkbox({ name, value, label, ...rest }) {
-  const inputRef = useRef();
-  const { fieldName, defaultValue, registerField, error } = useField(name);
+  const inputRef = useRef()
+  const { fieldName, defaultValue, registerField, error } = useField(name)
 
-  const defaultChecked = defaultValue === value;
+  const defaultChecked = defaultValue === value
 
   useEffect(() => {
     registerField({
       name: fieldName,
       ref: inputRef,
       getValue: (ref) => {
-        return ref.current.checked;
+        return ref.current.checked
       },
       clearValue: (ref) => {
-        ref.current.checked = defaultChecked;
+        ref.current.checked = defaultChecked
       },
       setValue: (ref, value) => {
-        ref.current.checked = value;
+        ref.current.checked = value
       },
-    });
-  }, [defaultValue, fieldName, registerField, defaultChecked]);
+    })
+  }, [defaultValue, fieldName, registerField, defaultChecked])
 
   return (
     <div>
@@ -41,5 +41,5 @@ export default function Checkbox({ name, value, label, ...rest }) {
 
       {error && <p className={styles.errorText}>{error}</p>}
     </div>
-  );
+  )
 }
