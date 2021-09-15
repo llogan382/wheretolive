@@ -1,6 +1,6 @@
-import Interests from "./Interests";
+import Social from "./Social";
 import MoreInfo from "./MoreInfo";
-import Area from "./Area";
+import Area from "./Social";
 
 
-export { Interests, MoreInfo, Area };
+export { Social, MoreInfo, Area };

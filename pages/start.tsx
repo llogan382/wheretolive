@@ -1,11 +1,14 @@
 import { useState, useRef } from "react";
 import Head from "next/head";
+import Data from "../components/getdata";
+
 import styles from "../styles/Styles.module.scss";
 import FormCard from "../components/FormCard";
 import {
-  Interests, MoreInfo, Area
+  Social, MoreInfo, Area
 } from "../components/Forms";
 import FormCompleted from "../components/FormCompleted";
+import Interests from "../components/Forms/Interests";
 
 const App = () => {
   const [formStep, setFormStep] = useState(0);
@@ -21,11 +24,9 @@ const App = () => {
       </Head>
       <h1>The magic, moving form</h1>
 
-
       <FormCard currentStep={formStep} prevFormStep={prevFormStep}>
         {formStep >= 0 && (
-          // TODO: Collect form data
-          <Interests formStep={formStep} nextFormStep={nextFormStep} />
+          <Social formStep={formStep} nextFormStep={nextFormStep} />
 
         )}
         {formStep >= 1 && (
@@ -33,7 +34,7 @@ const App = () => {
 
         )}
                 {formStep >= 2 && (
-          <Area formStep={formStep} nextFormStep={nextFormStep} />
+          <Interests formStep={formStep} nextFormStep={nextFormStep} />
 
         )}
 

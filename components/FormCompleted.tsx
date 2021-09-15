@@ -1,14 +1,17 @@
 import { useFormData } from "../context";
-import Data from "../pages/getdata";
-
+import Data from "./getdata";
 export default function FormCompleted() {
-  // const { data } = useFormData();
-
+  // @ts-ignore
+  const { data } = useFormData();
+const identifiers = Object.keys(data)
+const active = identifiers.filter(function(id) {
+  return data[id]
+})
   return (
     <>
-      <h2>Let&apos;s find the best places to move... 🎉</h2>
-<h4>Here are the TOP 50 that match your results:</h4>
-    <Data />
+    {/* {console.log('Here is the active data', active)} */}
+      <h2>Let&#39;s find the best places to move... 🎉</h2>
+<Data searchVars={active} />
 
     </>
   );
