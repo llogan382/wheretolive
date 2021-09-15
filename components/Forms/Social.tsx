@@ -37,7 +37,7 @@ export default function Social({ formStep, nextFormStep }: any) {
       }
     }
   }
-
+// TODO: fix spelling errors
   return (
     <div className={formStep === 0 ? styles.showForm : styles.hideForm}>
       <h2>What social characteristics matter to you?</h2>
