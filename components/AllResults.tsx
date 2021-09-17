@@ -10,9 +10,9 @@ export const AllResults = (jsonResponse) => {
   }, [jsonResponse])
 
   const result = results.slice().sort(function (a, b) {
-    return Number(b[2]) - Number(a[2])
+    return b[2] - a[2];
   })
-  console.log(result)
+  // console.log(result)
   return (
     <div>
       Here are the COMBINED top results:
@@ -20,8 +20,8 @@ export const AllResults = (jsonResponse) => {
         {Object.values(result)
           .slice(1, 11)
           .map((item) => (
-            <li key={item[1] - item[2]}>
-              {item[0]}: {item[2]}%; population: {item[1]}
+            <li key={item[3]+item[4]}>
+              {item[0]}: {item[2].toString()}%; population: {item[1]}
             </li>
           ))}
       </ol>

@@ -29,8 +29,6 @@ export default function Data(searchVars: any): any {
     // Get the number of households, and the items to compare. Households is #2 of returned array.
     const variables = `?get=NAME,DP02_0001E,${itemToCompare}`
     const variablePredicates = ``
-    // example BY PLACE
-    // https://api.census.gov/data/2019/acs/acs1/profile?get=NAME,DP02_0001E&for=place:*&in=state:*&key=YOUR_KEY_GOES_HERE
     const geographies = `&for=county:*&in=state:*`
     const key = `ee638959ae386e00dd646af2980f3da1f171a529`
 
@@ -41,11 +39,14 @@ export default function Data(searchVars: any): any {
         const response = await fetch(url)
         const json = await response.json()
         // TODO: Display weighted data from multiple inputs
-        json.map((item) => {
-          const toRemove = item.length - 2
-          let justVars = item.splice(2, toRemove)
-          const arrSum = (arr) => arr.reduce((a, b) => Number(a) + Number(b), 0)
-        }),
+        json.map(item => {
+          const removeVars = item.length - 4;
+          const justVars = item.slice(2, -2).map(Number);
+
+          const weightedAvg = arr => arr.reduce((a,b) => a + b, 0) / arr.length;
+          const showAvg = weightedAvg(justVars).toFixed(2);
+          item.splice(2, removeVars, showAvg);
+        });
           setAdvice(json)
       } catch (error) {
         console.log('error', error)
@@ -53,17 +54,6 @@ export default function Data(searchVars: any): any {
     }
     fetchData()
   }, [arrToInsert])
-
-  // 0: "White County, Arkansas"
-  // ​​​
-  // 1: "28621"
-  // ​​​
-  // 2: "20.2"
-  // ​​​
-  // 3: "05"
-  // ​​​
-  // 4: "145
-  // length: 5
   return (
     <>
       <AllResults jsonResponse={advice} />
