@@ -38,7 +38,6 @@ export default function Data(searchVars: any): any {
       try {
         const response = await fetch(url)
         const json = await response.json()
-        // TODO: Display weighted data from multiple inputs
         json.map(item => {
           const removeVars = item.length - 4;
           const justVars = item.slice(2, -2).map(Number);

@@ -5,7 +5,7 @@ $text-color: #293241;
 $color-white: #fff;
 
 $border-radius: 4px;
-
+// TODO: Update styles for mobile, everything else. Make it look GOOD!
 .container {
   padding: 3rem;
   width: 600px;
@@ -91,7 +91,7 @@ $border-radius: 4px;
     background: rgba($primary-color, 0.8);
   }
 
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     margin-right: 0.7rem;
   }
 

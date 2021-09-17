@@ -14,14 +14,13 @@ const App = () => {
   const nextFormStep = () => setFormStep((currentStep) => currentStep + 1)
 
   const prevFormStep = () => setFormStep((currentStep) => currentStep - 1)
-
+// TODO: Add pages to explain more about the site.
   return (
     <div className={styles.container}>
       <Head>
         <title>Where should I move now</title>
       </Head>
       <h1>The magic, moving form</h1>
-
       <FormCard currentStep={formStep} prevFormStep={prevFormStep}>
         {formStep >= 0 && (
           <Social formStep={formStep} nextFormStep={nextFormStep} />
