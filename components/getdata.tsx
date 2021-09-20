@@ -9,11 +9,11 @@ export default function Data(searchVars: any): any {
   const [advice, setAdvice]: any = useState([])
 
   const arrToInsert = searchVars.searchVars.toString()
-  function toPercent(val) {
+  function toPercent(val: string) {
     return Number(parseFloat(val).toFixed(2)) * 100
   }
 
-  function numberWithCommas(x) {
+  function numberWithCommas(x: { toString: () => string }) {
     var parts = x.toString().split('.')
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',')
     return parts.join('.')
@@ -38,11 +38,10 @@ export default function Data(searchVars: any): any {
       try {
         const response = await fetch(url)
         const json = await response.json()
-        json.map(item => {
+        json.map((item: any[]) => {
           const removeVars = item.length - 4;
           const justVars = item.slice(2, -2).map(Number);
-
-          const weightedAvg = arr => arr.reduce((a,b) => a + b, 0) / arr.length;
+          const weightedAvg = (arr: any[]) => arr.reduce((a: any,b: any) => a + b, 0) / arr.length;
           const showAvg = weightedAvg(justVars).toFixed(2);
           item.splice(2, removeVars, showAvg);
         });

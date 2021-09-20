@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export const AllResults = (jsonResponse) => {
+export const AllResults = (jsonResponse: { [x: string]: any }) => {
   const { ...data } = jsonResponse
 
   const [results, setResults] = useState([])
@@ -12,7 +12,6 @@ export const AllResults = (jsonResponse) => {
   const result = results.slice().sort(function (a, b) {
     return b[2] - a[2];
   })
-  // console.log(result)
   return (
     <div>
       Here are the COMBINED top results:
