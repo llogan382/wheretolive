@@ -10,12 +10,19 @@ const schema = yup.object().shape({
   checkbox: yup.bool().oneOf([true], 'Checkbox is required'),
 })
 
-export default function Interests({ formStep, nextFormStep }) {
-  // @ts-ignore
+interface InterestType {
+  formStep: number;
+  nextFormStep: () => void;
+  setFormValues: any;
+}
+
+const Interests:React.ReactNode = (props: InterestType) =>  {
+
+  const {formStep, nextFormStep} = props;
   const { setFormValues } = useFormData()
   const formRef: any = useRef()
 
-  async function handleSubmit(data) {
+  async function handleSubmit(data: any) {
     try {
       formRef.current.setErrors({})
 
@@ -52,3 +59,5 @@ export default function Interests({ formStep, nextFormStep }) {
     </div>
   )
 }
+
+export default Interests;

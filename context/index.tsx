@@ -1,6 +1,5 @@
 import { useState, createContext, useContext } from 'react'
 
-// @ts-ignore
 export const FormContext = createContext({})
 
 export default function FormProvider({ children }) {

@@ -14,6 +14,7 @@
     "resolveJsonModule": true,
     "strictNullChecks": false,
     "allowUnusedLabels": true,
+    "strictFunctionTypes": true,
     "strictPropertyInitialization": false,
     "suppressImplicitAnyIndexErrors":true,
     "suppressExcessPropertyErrors":true,
