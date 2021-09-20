@@ -1,6 +1,15 @@
 import styles from '../styles/Styles.module.scss'
 
-export default function FormCard({ children, currentStep, prevFormStep }) {
+type FormCardType = {
+  children: any;
+  currentStep: number;
+  prevFormStep: () => void;
+}
+
+const FormCard:React.FC<FormCardType> = props => {
+
+  const {children, currentStep, prevFormStep } = props;
+
   return (
     <div className={styles.formCard}>
       {currentStep < 3 && (
@@ -17,3 +26,5 @@ export default function FormCard({ children, currentStep, prevFormStep }) {
     </div>
   )
 }
+
+export default FormCard;

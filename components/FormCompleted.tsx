@@ -9,7 +9,6 @@ export default function FormCompleted() {
   })
   return (
     <>
-      {/* {console.log('Here is the active data', active)} */}
       <h2>Let&#39;s find the best places to move... 🎉</h2>
       <Data searchVars={active} />
     </>

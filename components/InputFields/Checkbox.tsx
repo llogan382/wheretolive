@@ -3,8 +3,17 @@ import { useField } from '@unform/core'
 import { useFormData } from '../../context'
 import styles from '../../styles/Styles.module.scss'
 
-export default function Checkbox({ name, value, label, ...rest }) {
+type CheckboxType = {
+  name: string;
+  value: string;
+  label: string;
+   [x:string]: any;
+
+}
+
+const Checkbox:React.FC<CheckboxType> = props =>  {
   const inputRef = useRef()
+  const {name, value, label, ...rest} = props;
   const { fieldName, defaultValue, registerField, error } = useField(name)
 
   const defaultChecked = defaultValue === value
@@ -42,3 +51,5 @@ export default function Checkbox({ name, value, label, ...rest }) {
     </div>
   )
 }
+
+export default Checkbox
