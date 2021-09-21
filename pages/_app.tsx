@@ -9,6 +9,9 @@ type MyAppType = {
 const MyApp = (props: { Component: any; pageProps: any; }) => {
 
   const {Component, pageProps } = props;
+// TODO: Update TSCONFIG
+// TODO: Update CI
+// TODO: Write Tests
   return (
     <FormProvider>
       <Component {...pageProps} />

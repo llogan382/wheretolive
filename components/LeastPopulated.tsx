@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 
+
 export const LeastPopulated = (jsonResponse: { [x: string]: any; jsonResponse?: any }) => {
   const { ...data } = jsonResponse
   const [results, setResults] = useState([])
   useEffect(() => {
-    // const updatedResults = [];
     setResults(data.jsonResponse)
   }, [jsonResponse])
 
