@@ -1,4 +1,6 @@
+import { StylesContext } from '@material-ui/styles'
 import { useEffect, useState } from 'react'
+import styles from '../styles/Styles.module.scss'
 
 export const MostPopulated = (jsonResponse) => {
   const { ...data } = jsonResponse
@@ -23,7 +25,7 @@ export const MostPopulated = (jsonResponse) => {
   })
 
   return (
-    <div>
+    <div className={styles.resultsTitle}>
       Here are the top results for LARGEST populated counties:
       <ol>
         {Object.values(result)

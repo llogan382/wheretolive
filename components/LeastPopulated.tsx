@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import styles from '../styles/Styles.module.scss'
 
 export const LeastPopulated = (jsonResponse) => {
   const { ...data } = jsonResponse
@@ -8,7 +9,6 @@ export const LeastPopulated = (jsonResponse) => {
     setResults(data.jsonResponse)
   }, [jsonResponse])
 
-  // TODO: Add prettier
   const [asArray] = [jsonResponse.jsonResponse]
   const oneThird = Math.floor(asArray.length / 3)
 
@@ -23,7 +23,7 @@ export const LeastPopulated = (jsonResponse) => {
   })
 
   return (
-    <div>
+    <div className={styles.resultsTitle}>
       Here are the top results for SMALLEST-SIZED counties:
       <ol>
         {Object.values(result)

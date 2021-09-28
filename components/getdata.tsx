@@ -4,6 +4,7 @@ import { AllResults } from './AllResults'
 import { MostPopulated } from './MostPopulated'
 import { MiddlePopulations } from './MiddlePopulations'
 import { LeastPopulated } from './LeastPopulated'
+import styles from '../../styles/Styles.module.scss'
 
 export default function Data(searchVars: any): any {
   const [advice, setAdvice]: any = useState([])
@@ -38,7 +39,6 @@ export default function Data(searchVars: any): any {
       try {
         const response = await fetch(url)
         const json = await response.json()
-        // TODO: Display weighted data from multiple inputs
         json.map(item => {
           const removeVars = item.length - 4;
           const justVars = item.slice(2, -2).map(Number);
