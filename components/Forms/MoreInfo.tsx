@@ -41,7 +41,7 @@ export default function MoreInfo({ formStep, nextFormStep }) {
 
   return (
     <div className={formStep === 1 ? styles.showForm : styles.hideForm}>
-      <h2>What what is important in regards to the economy?</h2>
+      <h2>What is important in regards to the economy?</h2>
       <Form ref={formRef} onSubmit={handleSubmit}>
         <div className={styles.formRow}>
           <Checkbox name="DP03_0002PE" label="Low unemployment" value="" />
