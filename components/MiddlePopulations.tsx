@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import styles from '../styles/Styles.module.scss'
 
 export const MiddlePopulations = (jsonResponse) => {
   const { ...data } = jsonResponse
@@ -23,7 +24,8 @@ export const MiddlePopulations = (jsonResponse) => {
   })
 
   return (
-    <div>
+    <div className={styles.resultsTitle}>
+
       Here are the top results for MID-SIZED counties:
       <ol>
         {Object.values(result)
