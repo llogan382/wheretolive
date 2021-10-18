@@ -20,7 +20,7 @@ export const AllResults = (jsonResponse: { [x: string]: any }) => {
       <ol>
         {Object.values(result)
           .slice(1, 11)
-          .map((item) => (
+          .map((item: any) => (
             <li key={item[3]+item[4]}>
               {item[0]}: {item[2].toString()}%; population: {item[1]}
             </li>

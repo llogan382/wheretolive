@@ -1,33 +1,33 @@
+import React from 'react'
 import FormProvider from '../context'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import '../styles/globals.css'
 
-type MyAppType = {
+interface MyAppType {
   Component: any;
   pageProps: any;
 }
-
-const MyApp = (props: { Component: any; pageProps: any; }) => {
+declare global {
+  interface Window {
+    Gtag: (...args: any[]) => void;
+  }
+}
+const MyApp = (props: MyAppType ) => {
 
   const {Component, pageProps } = props;
 // TODO: Update TSCONFIG
 // TODO: Update CI
 // TODO: Write Tests
-
-declare global {
-interface Window {
-  Gtag: (...args: any[]) => void;
-}
-}
+// TODO: Add storybook
 
 
-function MyApp({ Component, pageProps }) {
+
   const router = useRouter()
 
   useEffect(() => {
     let Gtag = window.Gtag;
-    const handleRouteChange = url => {
+    function handleRouteChange(url: any) {
       window.Gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
         page_path: url,
       })

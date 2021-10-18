@@ -30,7 +30,7 @@ export const MostPopulated = (jsonResponse: { [x: string]: any; jsonResponse?: a
       <ol>
         {Object.values(result)
           .slice(1, 4)
-          .map((item) => (
+          .map((item: any) => (
             <li key={item[1] - item[2]}>
               {item[0]}: {item[2]}%; population: {item[1]}
             </li>

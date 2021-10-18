@@ -19,7 +19,7 @@ interface InterestType {
 const Interests:React.ReactNode = (props: InterestType) =>  {
 
   const {formStep, nextFormStep} = props;
-  const { setFormValues } = useFormData()
+  const { setFormValues }:any = useFormData()
   const formRef: any = useRef()
 
   async function handleSubmit(data: any) {
@@ -39,7 +39,7 @@ const Interests:React.ReactNode = (props: InterestType) =>  {
         console.log(err.inner)
         // Validation failed - do show error
         err.inner.forEach((error) => {
-          errors[error.path] = error.message
+          errors[error.value] = error.message
         })
         formRef.current.setErrors(errors)
       }

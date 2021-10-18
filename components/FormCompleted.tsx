@@ -1,3 +1,4 @@
+import React from 'react';
 import { useFormData } from '../context'
 import Data from './getdata'
 import styles from '../styles/Styles.module.scss'

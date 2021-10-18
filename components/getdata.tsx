@@ -55,6 +55,7 @@ export default function Data(searchVars: any): any {
   }, [arrToInsert])
   return (
     <>
+    {console.log('hi there')}
       <AllResults jsonResponse={advice} />
 
       <MostPopulated jsonResponse={advice} />
