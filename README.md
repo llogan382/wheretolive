@@ -60,3 +60,17 @@ https://api.census.gov/data/2019/acs/acs1/profile/groups/DP05.html
 
 - age (by group) and sex
 - race (mix, etc)
+
+
+Good morning! It was great connecting yesterday about some important Endava topics. I wanted to follow up and hear your thoughts on something. I know we briefly touched on it, but I wanted to hear more about career growths/paths with Endava.
+
+What was explained I loosely interpreted as locking a person's growth into one area (in my case, as a Sr. Technician in the Developer path). Is that a correct understanding?
+
+There is a cool career map on [the endava site](https://cds.endava.com/web/guest/my-career/career-map).
+
+If I wanted to move to Devops or Infrastructure, what would that look like?
+
+
+AuUF-hKs72
+
+hYZ6!orXhVkqXvq4

@@ -4,6 +4,7 @@ import { AllResults } from './AllResults'
 import { MostPopulated } from './MostPopulated'
 import { MiddlePopulations } from './MiddlePopulations'
 import { LeastPopulated } from './LeastPopulated'
+import styles from '../../styles/Styles.module.scss'
 
 export default function Data(searchVars: any): any {
   const [advice, setAdvice]: any = useState([])

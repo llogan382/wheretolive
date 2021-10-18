@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import styles from '../styles/Styles.module.scss'
 
 export const AllResults = (jsonResponse: { [x: string]: any }) => {
   const { ...data } = jsonResponse
@@ -13,7 +14,8 @@ export const AllResults = (jsonResponse: { [x: string]: any }) => {
     return b[2] - a[2];
   })
   return (
-    <div>
+    <div className={styles.resultsTitle}>
+
       Here are the COMBINED top results:
       <ol>
         {Object.values(result)
